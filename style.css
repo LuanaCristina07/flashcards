@@ -1,32 +1,34 @@
-:root{
-    --text-color:
+:root {
+    --text-color: #DBE4EF;
+    --card-front-color: #144480;
+    --card-back-color: #00F4BF;
 }
-
 body{
-    background-color: url(img/bg-desktop.webp);
-    font-family: Bai Janjuree;
-}
+    background: url(img/bg-desktop.webp);
+    font-family:Bai jamjuree;
+} 
 
 #container{
     display: flex;
 }
-
-.cartao{
+.cartão{
     margin: 1rem 1rem;
-    background-color: red;
     height: 20rem;
     flex-grow: 1;
-    flex-basis: calc(33%-6rem);
+    flex-basis: calc(33% - 6rem);
 }
 
-.cartao_conteudo{
+
+.cartão--conteudo{
     text-align: center;
-    background-color: crimson;
+    background-color: var(--card-front-color);
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
 }
 
-footer{
-    background-color: darkred;
+    footer{
+    background-color: black;
     color: white;
     position: fixed;
     bottom: 0;
@@ -34,41 +36,49 @@ footer{
     height: 2rem;
 }
 
-footer p{
+    footer p{
     text-align: center;
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     margin-top: 0.5rem;
 }
 
-.cartao_conteudo h3{
-    background-color: firebrick;
+.cartão--conteudo h3{
+    color: var(--text-color)
+    
     text-align: left;
     padding: 0.5rem;
     position: absolute;
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
-}
-
-.cartao_conteudo_pergunta p {
-    color: var(--text-color);
-    font-weight: 500;
-}
-
-.cartao_conteudo_resposta p {
-    color: var(--card-back-color);
-    font-weight: 700;
-}
-
-.cartao:hover.cartao__conteudo{
-    transform: rotateY(180deg);
-}
-
-.cartao_conteudo_pergunta,
-.cartao_conteudo_resposta{
     backface-visibility: hidden;
 }
 
-.cartao_conteudo_resposta{
+ .cartão--conteudo p{
+    margin-top: 1res;
+    padding: 2res;
+    margin: 4res;
+
+ }
+.cartão__conteudo_pergunta p { 
+    color: var(--text-color);
+    font-weight: 500;
+ }
+
+ .cartão__conteudo_reposta p {
+    color: var(--card-back-color);
+    font-weight: 700;
+ }
+
+ .cartão:hover.cartão__conteudo{
+     transform: rotateY(180deg);
+ }
+
+ .cartão__conteudo_pergunta,
+ .cartão__conteudo_reposta{
+    backface-visibility: hidden;
+ }
+
+ .cartão__conteudo_reposta{
     transform: rotateY(180deg);
-}
+ }
