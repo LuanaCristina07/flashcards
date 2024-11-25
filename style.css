@@ -78,7 +78,6 @@
     }
     
     .cartao:hover_.cartao__conteudo {
-    
     transform: rotateY(180deg);
     }
     
